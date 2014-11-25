@@ -1,0 +1,21 @@
+{
+    "name" : "gidriss/signifyd-api-php",
+    "keywords": [],
+    "homepage": "http://www.splicedmedia.com",
+    "license": "APACHE 2.0",
+    "authors" : [{
+        "name" : "Gassan Idriss",
+        "email" : "ghassani@splicedmedia.com"
+    }
+    ],
+    "require" : {
+        "php": ">=5.3.0",
+        "guzzle/http": "~3.1"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Spliced\\Signifyd\\" : ""
+        }
+    },
+    "minimum-stability" : "dev"
+}
