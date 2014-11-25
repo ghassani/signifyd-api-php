@@ -105,7 +105,11 @@ class Client
             ));
         }
 
-        $request = $reflector->newInstanceArgs($arguments);
+        try {
+            $request = $reflector->newInstanceArgs($arguments);
+        } catch (\ReflectionException $e) {
+            $request = new $fqClassRequest();
+        }
 
         $request->setClient($this);
 
