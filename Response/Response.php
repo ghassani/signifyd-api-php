@@ -14,7 +14,7 @@ class Response
 
     public function __construct(HttpResponse $response)
     {
-        $this->httpResponse;
+        $this->httpResponse = $response;
         $this->response = json_decode($response->getBody(true), true);
     }
 
