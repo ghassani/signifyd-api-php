@@ -11,7 +11,7 @@ class CreateCaseTest extends \PHPUnit_Framework_TestCase
     public function testFunctionality()
     {
 
-        $apiKey = 'P20WK0mTK4uw5fvUMiDsUJDXY';
+        $apiKey = '';
 
 
         $client = new Client($apiKey);
