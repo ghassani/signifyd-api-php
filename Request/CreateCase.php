@@ -13,7 +13,7 @@ class CreateCase extends AbstractRequest
     protected $data = array(
         'purchase'      => null,
         'recipient'     => null,
-        'cart'          => null,
+        'card'          => null,
         'userAccount'   => null,
         'seller'        => null,
     );
