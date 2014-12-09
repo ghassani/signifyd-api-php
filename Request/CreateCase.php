@@ -106,4 +106,11 @@ class CreateCase extends AbstractRequest
         return 'cases';
     }
 
+    /**
+     * @{inheritDoc}
+     */
+    public function getRequestMethod()
+    {
+        return static::REQUEST_TYPE_POST;
+    }
 }

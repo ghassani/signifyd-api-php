@@ -6,6 +6,8 @@ use Spliced\Signifyd\Client;
 
 interface RequestInterface
 {
+    const REQUEST_TYPE_POST = 'POST';
+    const REQUEST_TYPE_GET  = 'GET';
 
     /**
      * @return Client|null
@@ -56,4 +58,12 @@ interface RequestInterface
      * @return string
      */
     public function toArray();
+
+    /**
+     * Returns the method the request requires.
+     * i.e. GET, POST, etc
+     *
+     * @return string
+     */
+    public function getRequestMethod();
 }

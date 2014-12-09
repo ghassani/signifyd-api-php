@@ -43,4 +43,12 @@ class GetCaseEntries extends AbstractRequest
     {
         return sprintf('cases/%s/entries', $this->getId());
     }
+
+    /**
+     * @{inheritDoc}
+     */
+    public function getRequestMethod()
+    {
+        return static::REQUEST_TYPE_GET;
+    }
 }

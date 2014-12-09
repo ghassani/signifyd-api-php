@@ -125,10 +125,14 @@ class Client
     public function send(RequestInterface $request)
     {
 
-        $httpRequest = $this->httpClient->post($request->getUri());
+        if ($request->getRequestMethod() == RequestInterface::REQUEST_TYPE_POST) {
+            $httpRequest = $this->httpClient->post($request->getUri())
+                ->setBody($request->toJson());
+        } else {
+            $httpRequest = $this->httpClient->get($request->getUri());
+        }
 
         $httpRequest
-            ->setBody($request->toJson())
             ->setAuth($this->getKey(), '')
             ->setHeader('Content-Type', 'application/json');
 

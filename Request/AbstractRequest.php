@@ -85,4 +85,12 @@ abstract class AbstractRequest implements RequestInterface
     {
         return isset($this->data[$param]) ? $this->data[$param] : false;
     }
+
+    /**
+     * @{inheritDoc}
+     */
+    public function getRequestMethod()
+    {
+        return static::REQUEST_TYPE_GET;
+    }
 }

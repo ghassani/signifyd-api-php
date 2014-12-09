@@ -41,7 +41,15 @@ class GetCase extends AbstractRequest
      */
     public function getUri()
     {
-        return sprintf('cases/%s/notes', $this->getId());
+        return sprintf('cases/%s', $this->getId());
+    }
+
+    /**
+     * @{inheritDoc}
+     */
+    public function getRequestMethod()
+    {
+        return static::REQUEST_TYPE_GET;
     }
 
 }
