@@ -19,7 +19,7 @@ use GuzzleHttp\Exception\ServerException as HttpServerException;
 class Client
 {
 
-    /** @var string base url endpoint to construct requests off - sprintf replaced client id*/
+    /** @var string base url endpoint to construct requests off */
     protected $endpoint = 'https://api.signifyd.com/v2/';
 
     /** @var string $key */
