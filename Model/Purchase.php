@@ -5,7 +5,11 @@ namespace Spliced\Signifyd\Model;
 use Spliced\Signifyd\Client;
 
 class Purchase
-{
+{	
+	public $orderSessionId;
+
+    public $browserIpAddress;
+
     public $browserIpAddress;
 
     public $orderId;
@@ -28,6 +32,18 @@ class Purchase
 
     public $products = array();
 
+
+    public function setOrderSessionId($sessionId)
+    {
+    	$this->orderSessionId = $sessionId;
+    	return $this;
+    }
+
+    public function getOrderSessionId()
+    {
+    	return $this->orderSessionId;
+    }
+    
     /**
      * @return mixed
      */
