@@ -6,9 +6,8 @@ use Spliced\Signifyd\Client;
 
 class Purchase
 {	
-	public $orderSessionId;
-
-    public $browserIpAddress;
+    
+    public $orderSessionId;
 
     public $browserIpAddress;
 
@@ -43,7 +42,7 @@ class Purchase
     {
     	return $this->orderSessionId;
     }
-    
+
     /**
      * @return mixed
      */
